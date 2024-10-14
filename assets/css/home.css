@@ -1,0 +1,13 @@
+main .posts {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin: 10px 0 10px 0;
+}
+
+main .posts .post .title {
+    font-weight: bold;
+    font-size: x-large;
+}

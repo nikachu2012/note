@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {{ partial "head" }}
-    <title>
-        {{ block "title" . }}
-        {{ printf "%s - %s" .Title .Site.Title }}
-        {{ end }}
-    </title>
+    
+    {{ with resources.Get "css/reset.css" | resources.Minify }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ end }}
+    {{ with resources.Get "css/base.css" | resources.Minify }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ end }}
+
+    {{ block "head" . }}{{ end }}
+    <title>{{ block "title" . }}{{ printf "%s - %s" .Title .Site.Title }}{{ end }}</title>
 </head>
 
 <body>
