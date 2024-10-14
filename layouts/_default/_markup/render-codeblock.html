@@ -1,0 +1,3 @@
+{{ $opts := merge .Options (dict "lineNos" true) ( dict "lineNumbersInTable" false ) (dict "style" "github-dark") }}
+{{ $result := transform.HighlightCodeBlock . $opts }}
+{{ $result.Wrapped }}
