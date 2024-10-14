@@ -22,14 +22,17 @@ article .highlight>pre {
 /* base text */
 article h1,
 article h2,
-article h3,
-article h4,
-article h5,
-article h6 {
+article h3 {
     line-height: 1.7;
     border-bottom: 1px solid var(--borderColor);
 
-    margin: 5px 0 5px 0;
+    margin: 10px 0 10px 0;
+}
+
+article h4,
+article h5,
+article h6 {
+    margin: 10px 0 5px 0;
 }
 
 article h1 {
@@ -107,7 +110,7 @@ blockquote.alert {
     padding: 3px 0 3px 10px;
 }
 
-blockquote.alert .alert-heading{
+blockquote.alert .alert-heading {
     font-weight: bold;
     font-size: small;
 }
