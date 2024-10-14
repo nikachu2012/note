@@ -1,0 +1,17 @@
+main .detail {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    margin: 20px 0 10px 0;
+}
+
+main .detail h1 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 2em;
+
+    line-height: 1;
+    border: none;
+}

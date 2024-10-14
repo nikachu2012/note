@@ -1,0 +1,21 @@
+{{ define "head" }}
+    {{ with resources.Get "css/markdown.css" | resources.Minify }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ end }}
+    {{ with resources.Get "css/single.css" | resources.Minify }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ end }}
+{{end}}
+
+
+{{ define "main" }}
+    <main>
+        <div class="detail">
+            <h1>{{ .Title }}</h1>
+            <span class="monospace">{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}</span>
+        </div>
+        <article>
+            {{ .Content }}
+        </article>
+    </main>
+{{ end }}
