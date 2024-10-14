@@ -1,0 +1,33 @@
+{{ 
+    $colorDict := dict
+        "note"      "0969da"
+        "tip"       "1a7f37"
+        "important" "8250df"
+        "warning"   "9a6700"
+        "caution"   "d1242f"
+}}
+
+{{ $alertColor := (index $colorDict .AlertType) }}
+{{ with not (index $colorDict .AlertType) }}
+    {{ $alertColor = "000000" }}
+{{ end }}
+
+{{ if eq .Type "alert" }}
+    <blockquote class="alert alert-{{ .AlertType }}" style="border-left: 3px solid #{{ $alertColor }};">
+        <p
+            class="alert-heading"
+            style="color: #{{ $alertColor }};">
+            <!-- {{/* transform.Emojify (index $emojis .AlertType) */}} -->
+            {{ with .AlertTitle }}
+                {{ . }}
+            {{ else }}
+                {{ or (i18n .AlertType) (title .AlertType) }}
+            {{ end }}
+        </p>
+        {{ .Text }}
+    </blockquote>
+{{ else }}
+    <blockquote class="simple">
+        {{ .Text }}
+    </blockquote>
+{{ end }}
