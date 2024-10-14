@@ -1,0 +1,32 @@
+{{ $src := .Get "src" }}
+{{ $title := .Get "caption" }}
+{{ $width := .Get "w" }}
+{{ $res := .Page.Resources.GetMatch $src }}
+
+
+{{/* ページまたぎでリンク切れを防ぐおまじない */}}
+{{ if $res }}
+    {{ $src = $res.RelPermalink }}
+
+    {{ $processStr := "webp" }}
+    {{ if $width }}
+    {{ $processStr = printf "%s resize %sx" $processStr $width }}
+    {{ end }}
+
+    {{ $image := $res.Process $processStr }}
+
+    <figure>
+        <a href="{{ $src }}" target="_blank">
+            <img src="{{ $image.RelPermalink }}" alt="{{ with $title }}{{ . }}{{ else }}{{ $res.File.F }}{{ end }}" />
+        </a>
+        {{ with $title }}
+        <figcaption>{{ . }}</figcaption>
+        {{ end }}
+    </figure>
+
+{{ else }}
+    {{ errorf "%s: %q is not found. " .Position $src}}
+{{ end }}
+
+
+
