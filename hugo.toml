@@ -2,5 +2,7 @@ baseURL = 'https://note.nikachu.net/'
 languageCode = 'ja-jp'
 title = 'note.nikachu.net'
 
+enableGitInfo = true
+
 [params]
 name = "nikachu2012"
