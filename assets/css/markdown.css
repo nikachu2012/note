@@ -86,7 +86,7 @@ article figure figcaption {
 }
 
 /* blockquote */
-blockquote.simple {
+article blockquote.simple {
     border-left: 3px solid var(--borderColor);
     margin: 10px 0px 10px 0px;
     padding: 10px;
@@ -94,23 +94,23 @@ blockquote.simple {
     font-style: italic;
 }
 
-blockquote.simple:last-child {
+article blockquote.simple:last-child {
     margin-bottom: 0;
 }
 
-blockquote.simple p,
-blockquote.alert p {
+article blockquote.simple p,
+article blockquote.alert p {
     margin: 0;
     padding: 0;
 }
 
 /* alert */
-blockquote.alert {
+article blockquote.alert {
     margin: 10px 0px 10px 0px;
     padding: 3px 0 3px 10px;
 }
 
-blockquote.alert .alert-heading {
+article blockquote.alert .alert-heading {
     font-weight: bold;
     font-size: small;
 }
