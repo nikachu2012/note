@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 :root {
     --main-width: 700px;
+    --sm-main-width: 100%;
 
     --monospace: "Source Code Pro", monospace;
 
@@ -92,4 +94,13 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+    header>div,
+    main,
+    footer {
+        width: var(--sm-main-width);
+        padding: 0 20px;
+    }
 }
