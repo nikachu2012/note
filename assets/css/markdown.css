@@ -84,6 +84,7 @@ article figure {
     align-items: center;
     margin: 15px 0 15px 0;
 
+    max-width: 100% !important;
 }
 
 article figure figcaption {
