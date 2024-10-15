@@ -4,5 +4,16 @@ title = 'note.nikachu.net'
 
 enableGitInfo = true
 
+[markup]
+[markup.goldmark]
+[markup.goldmark.extensions]
+[markup.goldmark.extensions.passthrough]
+enable = true
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [['\[', '\]'], ['$$', '$$']]
+inline = [['$', '$']]
+
+
 [params]
 name = "nikachu2012"
+math = false

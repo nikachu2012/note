@@ -13,6 +13,10 @@
         <link rel="stylesheet" href="{{ .RelPermalink }}">
     {{ end }}
 
+    {{ if .Param "math"}}
+        {{ partial "katex.html" }}
+    {{ end }}
+    
     {{ block "head" . }}{{ end }}
     <title>{{ block "title" . }}{{ printf "%s - %s" .Title .Site.Title }}{{ end }}</title>
 </head>
