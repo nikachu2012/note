@@ -114,3 +114,23 @@ article blockquote.alert .alert-heading {
     font-weight: bold;
     font-size: small;
 }
+
+
+/* table */
+article table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 1px solid var(--borderColor);
+    margin: 10px 0 10px 0;
+}
+
+article table thead {
+    background-color: var(--backgroundColor);
+}
+
+article table th,
+article table td {
+    padding: 5px;
+    border: 1px solid var(--borderColor);
+}
+
