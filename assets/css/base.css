@@ -50,17 +50,17 @@ header {
     border-bottom: 1px solid var(--borderColor);
 }
 
-header div {
+header>div {
     width: var(--main-width);
     margin: auto;
     height: 100%;
 
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
-header div .title {
+header>div .title {
     line-height: 1;
     font-size: larger;
 }
