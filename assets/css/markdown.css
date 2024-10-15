@@ -134,3 +134,13 @@ article table td {
     border: 1px solid var(--borderColor);
 }
 
+
+/* gist */
+article .gist .gist-file {
+    border: 1px solid var(--borderColor);
+}
+
+article .gist th,
+article .gist td {
+    border: none;
+}
