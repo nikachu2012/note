@@ -20,7 +20,17 @@ main .detail .tools {
     display: flex;
     justify-content: flex-end;
     gap: 5px;
-    
+
     font-size: small;
     user-select: none;
+}
+
+main .detail .tools a {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+main .detail .tools .status {
+    font-size: small;
+    display: none;
 }

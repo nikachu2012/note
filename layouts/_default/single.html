@@ -1,27 +1,59 @@
 {{ define "head" }}
-    {{ with resources.Get "css/markdown.css" | resources.Minify }}
-        <link rel="stylesheet" href="{{ .RelPermalink }}">
-    {{ end }}
-    {{ with resources.Get "css/single.css" | resources.Minify }}
-        <link rel="stylesheet" href="{{ .RelPermalink }}">
-    {{ end }}
+{{ with resources.Get "css/markdown.css" | resources.Minify }}
+<link rel="stylesheet" href="{{ .RelPermalink }}">
+{{ end }}
+{{ with resources.Get "css/single.css" | resources.Minify }}
+<link rel="stylesheet" href="{{ .RelPermalink }}">
+{{ end }}
 {{end}}
 
 
 {{ define "main" }}
-    <main>
-        <div class="detail">
-            <h1>{{ .Title }}</h1>
-            <span class="monospace">{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}</span>
-            <div class="tools">
-                <a href="/">link</a>
-                <a href="/">title</a>
-                <a href="/">link+title</a>
-                <a href="/">API link</a>
-            </div>
+<input id="tagText" type="text" hidden />
+
+<main>
+    <div class="detail">
+        <h1>{{ .Title }}</h1>
+        <span class="monospace">{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}</span>
+        <div class="tools">
+            <a onclick="copy(event.target, '{{- .Page.Permalink }}')" data-text="link">link</a>
+            <a onclick="copy(event.target, '{{- .Page.Title }}')" data-text="title">title</a>
+            <a onclick="copy(event.target, '{{- printf "[%s by note.nikachu.net](%s)" .Page.Title .Page.Permalink }}')" data-text="link+title">link+title</a>
+            <a onclick="copy(event.target, '{{- printf "placeholder" }}')" data-text="API link">API link</a>
         </div>
-        <article>
-            {{ .Content }}
-        </article>
-    </main>
+    </div>
+    <article>
+        {{ .Content }}
+    </article>
+</main>
+
+<script>
+    // const statusDOM = document.querySelector(".status")
+    let interval;
+    function copy(target, str) {
+        clearInterval(interval);
+        const buf = target.textContent;
+
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(str).then(function () { })
+        } else {
+            document.querySelector("#tagText").value = str;
+            document.querySelector("#tagText").select();
+            document.execCommand('copy');
+        }
+
+        target.textContent = "✅ copied!";
+        target.style.cursor = "default";
+        target.style.textDecoration = "none";
+
+        interval = setTimeout(() => {
+            target.textContent = target.getAttribute("data-text");
+            target.style.cursor = "pointer";
+            target.style.textDecoration = "underline";
+        }, 1000);
+
+        return;
+    }
+</script>
+
 {{ end }}
