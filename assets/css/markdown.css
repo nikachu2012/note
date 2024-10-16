@@ -27,6 +27,10 @@ article .highlight>pre code {
     -webkit-text-size-adjust: none;
 }
 
+article {
+    line-break: anywhere;
+}
+
 /* base text */
 article h1,
 article h2,
