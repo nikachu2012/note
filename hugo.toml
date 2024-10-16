@@ -25,3 +25,5 @@ filename = 'sitemap.xml'
 name = "nikachu2012"
 math = false
 commitURL = "https://github.com/nikachu2012/note/commit/"
+
+description = "Coding, Computer, Linux, Study, etc."
