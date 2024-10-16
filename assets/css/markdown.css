@@ -22,6 +22,8 @@ article .highlight>pre code {
 
     display: block;
     overflow-x: auto;
+
+    font-size: smaller;
 }
 
 /* base text */

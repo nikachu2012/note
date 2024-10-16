@@ -5,7 +5,7 @@
     --main-width: 700px;
     --sm-main-width: 100%;
 
-    --monospace: "Source Code Pro", monospace;
+    --monospace: "Source Code Pro", "Noto Sans JP", "Noto Sans CJK JP", monospace;
 
     --backgroundColor: #ededed;
     --borderColor: #c7c7c7;
