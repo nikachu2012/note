@@ -94,9 +94,17 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    overflow-wrap: anywhere;
+}
+
+footer .githash,
+footer .copyright {
+    font-size: normal;
+    text-align: right;
 }
 
 @media screen and (max-width: 768px) {
+
     header>div,
     main,
     footer {

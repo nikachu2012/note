@@ -8,7 +8,7 @@
     {{- $commitURL := .Site.Params.commitURL}}
     {{- with $hash := .GitInfo.Hash}}
     {{- with $commitURL }}
-    <div>Site Revision: <a class="monospace" target="_blank" href="{{- printf "%s%s" . $hash}}">
+    <div class="githash">Site Revision: <a class="monospace" target="_blank" href="{{- printf "%s%s" . $hash}}">
         {{ $hash }}
     </a></div>
     {{- end}}
