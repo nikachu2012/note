@@ -17,12 +17,7 @@
         <p
             class="alert-heading"
             style="color: #{{ $alertColor }};">
-            <!-- {{/* transform.Emojify (index $emojis .AlertType) */}} -->
-            {{ with .AlertTitle }}
-                {{ . }}
-            {{ else }}
-                {{ or (i18n .AlertType) (title .AlertType) }}
-            {{ end }}
+            {{- title .AlertType }}
         </p>
         {{ .Text }}
     </blockquote>
