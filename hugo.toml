@@ -16,6 +16,10 @@ enable = true
 block = [['\[', '\]'], ['$$', '$$']]
 inline = [['$', '$']]
 
+[sitemap]
+changeFreq = 'weekly'
+disable = false
+filename = 'sitemap.xml'
 
 [params]
 name = "nikachu2012"
