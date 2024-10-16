@@ -24,6 +24,7 @@ article .highlight>pre code {
     overflow-x: auto;
 
     font-size: smaller;
+    -webkit-text-size-adjust: none;
 }
 
 /* base text */
