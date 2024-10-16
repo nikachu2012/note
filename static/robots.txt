@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://note.nikachu.net/sitemap.xml
