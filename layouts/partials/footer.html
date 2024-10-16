@@ -1,4 +1,9 @@
 <footer>
+    <div class="copyright">
+        {{- with .Site.Params.name }}
+        {{- printf "Created by %s / by Hugo %s" . hugo.Version }}
+        {{- end }}
+    </div>
 
     {{- $commitURL := .Site.Params.commitURL}}
     {{- with $hash := .GitInfo.Hash}}
