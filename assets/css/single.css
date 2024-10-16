@@ -25,7 +25,7 @@ main .detail .tools {
     user-select: none;
 }
 
-main .detail .tools a {
+main .detail .tools span {
     text-decoration: underline;
     cursor: pointer;
 }
