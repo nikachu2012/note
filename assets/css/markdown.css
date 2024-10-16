@@ -184,6 +184,6 @@ article .collapse[open] summary {
     border-bottom: 1px solid var(--borderColor);
 }
 
-article .collapse div {
+article .collapse>div {
     margin: 10px;
 }
