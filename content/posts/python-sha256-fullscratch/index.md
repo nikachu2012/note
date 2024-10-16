@@ -1,8 +1,6 @@
 +++
 title = 'PythonでSHA256をフルスクラッチした'
-author = 'nikachu2012'
 date = 2024-02-11T00:27:48+09:00
-slug = "e2f3507a-6177-421d-a971-040ef542766d"
 description = "importを用いずPythonでSHA256を計算しました。"
 tags = [
     "python",
