@@ -157,3 +157,29 @@ article .gist th,
 article .gist td {
     border: none;
 }
+
+/* collapse */
+article .collapse {
+    border: 1px solid var(--borderColor);
+    border-radius: 3px;
+    margin: 10px 0;
+}
+
+article .collapse[open] {
+    border: 1px solid var(--borderColor);
+}
+
+article .collapse summary {
+    padding: 5px;
+    cursor: pointer;
+
+    background-color: var(--backgroundColor);
+}
+
+article .collapse[open] summary {
+    border-bottom: 1px solid var(--borderColor);
+}
+
+article .collapse div {
+    margin: 10px;
+}

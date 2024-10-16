@@ -132,3 +132,15 @@ int main(void)
 ```plain
 {{</* gist nikachu2012 d6543f3422b2e36c9ce4cc856af7a6dd main.c */>}}
 ```
+
+#### collapse
+```plain
+{{</* collapse title="This is collapse" */>}}
+### MyTextInside
+{{</* /collapse */>}}
+
+```
+
+{{< collapse title="This is collapse" >}}
+### MyTextInside
+{{< /collapse >}}

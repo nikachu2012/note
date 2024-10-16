@@ -1,0 +1,10 @@
+<details class="collapse">
+    <summary markdown="span">
+        {{- with .Get "title" }}
+        {{- . | markdownify }}
+        {{- end }}
+    </summary>
+    <div>
+        {{ .Inner | markdownify }}
+    </div>
+</details>
