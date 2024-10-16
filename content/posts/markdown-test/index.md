@@ -22,8 +22,6 @@ This is `Inline code`
 ```plain
 [Article link]({{</* ref "../second-post/index.md" */>}})
 ```
-[Article link]({{<ref "../second-post/index.md">}})
-
 ---
 
 this is $inline$ math.  
