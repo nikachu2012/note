@@ -1,6 +1,11 @@
 <footer>
-    <div>by {{.Site.Params.name}}</div>
-    <div>Site Revision: <span class="monospace">
-        {{.GitInfo.Hash }}
-    </span></div>
+
+    {{- $commitURL := .Site.Params.commitURL}}
+    {{- with $hash := .GitInfo.Hash}}
+    {{- with $commitURL }}
+    <div>Site Revision: <a class="monospace" target="_blank" href="{{- printf "%s%s" . $hash}}">
+        {{ $hash }}
+    </a></div>
+    {{- end}}
+    {{- end}}
 </footer>
