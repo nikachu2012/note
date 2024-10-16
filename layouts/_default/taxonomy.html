@@ -1,7 +1,21 @@
-{{ define "main" }}
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
-    {{ range .Pages }}
-        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+{{ define "head" }}
+    {{ with (resources.Get "css/home.css" | resources.Minify).Content | safeCSS}}
+        <style>{{ . }}</style>
     {{ end }}
+{{end}}
+
+{{ define "main" }}
+<main>
+    <div class="detail">
+        <h1 class="title">{{ printf "%s/" .Data.Plural }}</h1>
+    </div>    
+    <hr>
+    <div class="posts">
+        {{ range .Data.Terms.Alphabetical }}
+        <div class="post">
+            <div class="title"><a href="{{ .Page.RelPermalink }}">{{ .Term }}</a></div>
+        </div>
+        {{ end }}
+    </div>
+</main>
 {{ end }}

@@ -4,10 +4,27 @@ main .posts {
 
     gap: 10px;
 
-    margin: 10px 0 10px 0;
+    margin: 20px 0 20px 0;
 }
 
 main .posts .post .title {
     font-weight: bold;
     font-size: x-large;
+}
+
+main .detail {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+main .detail .title {
+    line-height: 1;
+}
+
+hr {
+    border: none;
+    margin: 10px 0 10px 0;
+    border-top: 1px solid var(--borderColor);
 }
