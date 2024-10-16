@@ -1,6 +1,6 @@
 ---
 title: Markdown Test
-date: 2024-10-13T20:00:10+09:00
+date: 1970-10-13T20:00:10+09:00
 slug: 0fffc7d4-bdd4-420e-9816-e9d09087c4be
 draft: true
 math: true
