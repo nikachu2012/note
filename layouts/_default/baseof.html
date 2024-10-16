@@ -14,9 +14,9 @@
     {{ end }}
 
     {{ if .Param "math"}}
-        {{ partial "katex.html" }}
+        {{ partial "katex.html" . }}
     {{ end }}
-    
+
     {{ block "head" . }}{{ end }}
     <title>{{ block "title" . }}{{ printf "%s - %s" .Title .Site.Title }}{{ end }}</title>
 </head>
