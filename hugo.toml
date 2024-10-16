@@ -17,3 +17,4 @@ inline = [['$', '$']]
 [params]
 name = "nikachu2012"
 math = false
+commitURL = "https://github.com/nikachu2012/note/commit/"
