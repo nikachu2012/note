@@ -28,7 +28,7 @@ This is `Inline code`
 
 this is $inline$ math.  
 $$
-S = \int_a^b f(x)dx = \lim_{\Delta x_k \to 0}\sum_{k=0}^nf(x)\Delta x_k
+S = \int_a^b f(x)dx = \lim_{\Delta x_k \to 0}\sum_{k=0}^nf(x_k)\Delta x_k
 $$
 
 [^1]:前に入力した数式を呼び出せる機能。コマンドラインで上キー(0x26)を押したときと同じ
