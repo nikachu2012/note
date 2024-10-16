@@ -6,6 +6,9 @@ enableGitInfo = true
 
 [markup]
 [markup.goldmark]
+[markup.goldmark.renderer]
+hardWraps = true
+
 [markup.goldmark.extensions]
 [markup.goldmark.extensions.passthrough]
 enable = true
