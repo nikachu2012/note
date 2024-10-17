@@ -17,7 +17,7 @@
 
     <figure>
         <a href="{{ $src }}" target="_blank">
-            <img src="{{ $image.RelPermalink }}" alt="{{ with $title }}{{ . }}{{ else }}{{ $res.File.F }}{{ end }}" />
+            <img src="{{ $image.RelPermalink }}" alt="{{ with $title }}{{ . }}{{ else }}{{ $res }}{{ end }}" />
         </a>
         {{ with $title }}
         <figcaption>{{ . }}</figcaption>
