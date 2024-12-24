@@ -5,7 +5,7 @@ description = "友人と同人誌「ンゴシリーズ vol.1」を制作した�
 tags = ["book", "ngoseries"]
 categories = ["misc"]
 math = false
-draft = true
+draft = false
 +++
 
 高専祭[^kousensai]で販売するために友人と同人誌「ンゴシリーズ vol.1」を制作した。
