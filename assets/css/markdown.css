@@ -98,6 +98,10 @@ article figure figcaption {
     margin-top: 3px;
 }
 
+article figure img {
+    border: 1px solid var(--borderColor);
+}
+
 /* blockquote */
 article blockquote.simple {
     border-left: 3px solid var(--borderColor);
