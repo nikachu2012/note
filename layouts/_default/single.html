@@ -18,8 +18,9 @@
         <div class="tools">
             <span onclick="copy(event.target, '{{- .Page.Permalink }}')" data-text="link">link</span>
             <span onclick="copy(event.target, '{{- .Page.Title }}')" data-text="title">title</span>
-            <span onclick="copy(event.target, '{{- printf "[%s by note.nikachu.net](%s)" .Page.Title .Page.Permalink }}')" data-text="link+title">link+title</span>
-            <span onclick="copy(event.target, '{{- printf "placeholder" }}')" data-text="API link">API link</span>
+            <span onclick="copy(event.target, '{{- printf " [%s by note.nikachu.net](%s)" .Page.Title .Page.Permalink
+                }}')" data-text="link+title">link+title</span>
+            <span onclick="copy(event.target, '{{- printf " placeholder" }}')" data-text="API link">API link</span>
         </div>
     </div>
     <article>
@@ -29,11 +30,12 @@
 
 <script>
     // const statusDOM = document.querySelector(".status")
-    let interval;
+    let interval = {};
     function copy(target, str) {
         clearInterval(interval);
-        const buf = target.textContent;
+        const attr = target.getAttribute("data-text");
 
+        // copy
         if (navigator.clipboard) {
             navigator.clipboard.writeText(str).then(function () { })
         } else {
@@ -42,12 +44,13 @@
             document.execCommand('copy');
         }
 
+        // view
         target.textContent = "✅ copied!";
         target.style.cursor = "default";
         target.style.textDecoration = "none";
 
-        interval = setTimeout(() => {
-            target.textContent = target.getAttribute("data-text");
+        interval[attr] = setTimeout(() => {
+            target.textContent = attr;
             target.style.cursor = "pointer";
             target.style.textDecoration = "underline";
         }, 1000);
