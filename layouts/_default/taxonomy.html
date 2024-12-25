@@ -1,5 +1,5 @@
 {{ define "head" }}
-    {{ with (resources.Get "css/home.css" | resources.Minify).Content | safeCSS}}
+    {{ with (resources.Get "css/taxonomy.css" | resources.Minify).Content | safeCSS}}
         <style>{{ . }}</style>
     {{ end }}
 {{end}}
@@ -9,12 +9,17 @@
     <div class="detail">
         <h1 class="title">{{ printf "%s/" .Data.Plural }}</h1>
     </div>    
-    <hr>
     <div class="posts">
         {{ range .Data.Terms.Alphabetical }}
+        <div class="categoryTitle">{{ .Term }}</div>
+
+        {{ range .WeightedPages }}
         <div class="post">
-            <div class="title"><a href="{{ .Page.RelPermalink }}">{{ .Term }}</a></div>
+            <span class="title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></span>
+            <span class="timestamp monospace">{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}</span>
         </div>
+        {{ end }}
+        
         {{ end }}
     </div>
 </main>
