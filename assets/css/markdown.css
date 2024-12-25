@@ -191,3 +191,7 @@ article .collapse[open] summary {
 article .collapse>div {
     margin: 10px;
 }
+
+article .footnotes {
+    margin-top: 30px;
+}
