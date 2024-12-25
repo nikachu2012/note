@@ -3,7 +3,8 @@ title = '4Kモニターを手に入れた'
 author = 'nikachu2012'
 description = "２万円で4Kモニターを手に入れたので、感想等を適当に書きます。"
 date = 2024-02-15T13:05:05+09:00
-tags = ["pc"]
+tags = ["monitor"]
+categories = ["computer"]
 series = []
 alias = []
 +++

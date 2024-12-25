@@ -7,6 +7,7 @@ tags = [
     "sha256",
     "fullscratch"
 ]
+categories =["python"]
 +++
 
 どうも金ないニカチュウと申します。

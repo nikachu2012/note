@@ -8,7 +8,7 @@ tags = [
     "os",
     "fullscratch"
 ]
-categories = ["OS作(ろうとす)る"]
+categories = ["operating system"]
 +++
 
 ## 目的

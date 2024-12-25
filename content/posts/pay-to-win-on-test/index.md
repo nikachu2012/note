@@ -4,8 +4,7 @@ author = 'nikachu2012'
 description = "関数電卓を買った話"
 date = 2024-06-02T19:13:42+09:00
 tags = ["calculator", "paytowin"]
-series = []
-alias = []
+categories = ["misc"]
 +++
 
 微積の教員を許さない。
