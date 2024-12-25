@@ -40,7 +40,6 @@ main nav#TableOfContents::before {
 
     display: block;
     margin-left: 20px;
-    margin-bottom: 5px;
 
     font-size: large;
     font-weight: bold;
@@ -56,5 +55,6 @@ main nav#TableOfContents {
 }
 
 main nav#TableOfContents>ul {
+    margin-top: 5px;
     margin: 0;
 }
