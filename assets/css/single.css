@@ -34,3 +34,27 @@ main .detail .tools .status {
     font-size: small;
     display: none;
 }
+
+main nav#TableOfContents::before {
+    content: "Table of contents";
+
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 5px;
+
+    font-size: large;
+    font-weight: bold;
+}
+
+main nav#TableOfContents {
+    background-color: var(--backgroundColor);
+    border: 1px solid var(--borderColor);
+    border-radius: 3px;
+
+    margin: 16px 0 16px 0;
+    padding: 10px;
+}
+
+main nav#TableOfContents>ul {
+    margin: 0;
+}

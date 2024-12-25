@@ -23,6 +23,9 @@
             <span onclick="copy(event.target, '{{- printf " placeholder" }}')" data-text="API link">API link</span>
         </div>
     </div>
+
+    {{ .TableOfContents }}
+
     <article>
         {{ .Content }}
     </article>
