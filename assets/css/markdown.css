@@ -33,18 +33,18 @@ article {
 
 /* base text */
 article h1,
-article h2,
-article h3 {
+article h2 {
     line-height: 1.7;
     border-bottom: 1px solid var(--borderColor);
 
-    margin: 10px 0 10px 0;
+    margin: 28px 0 -8px 0;
 }
 
+article h3,
 article h4,
 article h5,
 article h6 {
-    margin: 10px 0 5px 0;
+    margin: 28px 0 -8px 0;
 }
 
 article h1 {
@@ -73,13 +73,13 @@ article h6 {
 
 article p {
     width: 100%;
-    margin: 5px 0 0 0;
+    margin: 16px 0 0 0;
     text-align: justify;
 }
 
 article hr {
     border: none;
-    margin: 10px 0 10px 0;
+    margin: 16px 0 16px 0;
     border-top: 1px solid var(--borderColor);
 }
 
