@@ -4,13 +4,4 @@
         {{- printf "Created by %s / by Hugo %s" . hugo.Version }}
         {{- end }}
     </div>
-
-    {{- $commitURL := .Site.Params.commitURL}}
-    {{- with $hash := .GitInfo.Hash}}
-    {{- with $commitURL }}
-    <div class="githash">Site Revision: <a class="monospace" target="_blank" href="{{- printf "%s%s" . $hash}}">
-        {{ $hash }}
-    </a></div>
-    {{- end}}
-    {{- end}}
 </footer>
