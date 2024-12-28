@@ -28,7 +28,7 @@ article .highlight>pre code {
 }
 
 article {
-    word-break: keep-all;
+    word-break: break-all;
 }
 
 /* base text */
@@ -74,6 +74,7 @@ article h6 {
 article p {
     width: 100%;
     margin-bottom: 16px;
+    text-align: justify;
 }
 
 article hr {
