@@ -5,7 +5,7 @@ description = "同人サークル「nikatech」としての同人誌即売会初
 tags = []
 categories = ["misc"]
 math = false
-draft = true
+draft = false
 +++
 
 同人サークル「nikatech」として、また自分自身として初のガチ同人誌即売会サークル参加として、技術書典18に参加しました。
